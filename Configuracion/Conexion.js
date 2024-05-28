@@ -1,10 +1,12 @@
 const mysql2 = require('mysql2/promise');
 // Config
 const conection = mysql2.createPool({
-    host: 'localhost',
+    host: 'roundhouse.proxy.rlwy.net',
     user: 'root',
-    password: '',
-    database: 'VinosJoan'
+    password: 'lRGaOEUfOyPcAvUtjnWFxPZmLbMdKePV',
+    database: 'railway',
+    port: 10565,
+    connectTimeout: 10000 // 10 segundos
 });
 
 // Conectar a la base de datos
@@ -16,6 +18,4 @@ conection.getConnection().then(event =>{
 
 // Exportar la conexión
 module.exports = conection;
-
-
 
